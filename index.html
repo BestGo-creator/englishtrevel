@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAKEOFF — From Tashkent to the World</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+    .hero-bg {
+      background:
+        linear-gradient(90deg, rgba(5,12,25,.88) 0%, rgba(5,12,25,.58) 48%, rgba(5,12,25,.12) 100%),
+        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center/cover;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white">
+  <!-- NAVBAR -->
+  <header class="absolute z-10 w-full">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+      <a href="#" class="text-2xl font-black tracking-[.18em]">TAKE<span class="text-cyan-400">OFF</span><span class="text-cyan-400">.</span></a>
+      <div class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <a class="text-cyan-300" href="#home">Home</a>
+        <a class="hover:text-cyan-300" href="#destinations">Destinations</a>
+        <a class="hover:text-cyan-300" href="#packages">Packages</a>
+        <a class="hover:text-cyan-300" href="#about">About</a>
+      </div>
+      <a href="#booking" class="rounded-full bg-cyan-400 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-white">Plan my trip ↗</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero-bg flex min-h-[720px] items-center px-6 pb-20 pt-36 lg:px-10">
+      <div class="mx-auto w-full max-w-7xl">
+        <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[.22em] backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-cyan-300"></span> Your journey starts in Tashkent
+        </p>
+        <h1 class="max-w-4xl text-5xl font-black leading-[1.04] sm:text-6xl lg:text-8xl">FROM TASHKENT<br>TO <span class="text-cyan-300">ANYWHERE.</span></h1>
+        <p class="mt-7 max-w-xl text-lg leading-8 text-slate-200">Big dreams. New cultures. Unforgettable views. Discover the world with trips designed around you.</p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="#destinations" class="rounded-full bg-cyan-400 px-7 py-4 font-bold text-slate-950 transition hover:scale-105">Explore destinations ↗</a>
+          <a href="#packages" class="rounded-full border border-white/40 px-7 py-4 font-bold transition hover:bg-white hover:text-slate-950">View travel deals</a>
+        </div>
+        <div class="mt-16 grid max-w-2xl grid-cols-3 gap-5 border-t border-white/25 pt-6">
+          <div><p class="text-3xl font-black">30+</p><p class="mt-1 text-sm text-slate-300">Countries to explore</p></div>
+          <div><p class="text-3xl font-black">24/7</p><p class="mt-1 text-sm text-slate-300">Travel support</p></div>
+          <div><p class="text-3xl font-black">100%</p><p class="mt-1 text-sm text-slate-300">Made for your trip</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEARCH BAR -->
+    <section class="relative z-[1] mx-auto -mt-10 max-w-6xl px-5">
+      <form id="searchForm" class="grid gap-4 rounded-3xl border border-white/10 bg-slate-900 p-5 shadow-2xl md:grid-cols-4 md:p-6">
+        <label class="block"><span class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Leaving from</span><input value="Tashkent (TAS)" readonly class="w-full rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none"></label>
+        <label class="block"><span class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Destination</span><select id="destinationSelect" class="w-full rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none"><option>Choose a destination</option><option>Rome, Italy</option><option>Istanbul, Türkiye</option><option>Dubai, UAE</option><option>Seoul, South Korea</option><option>Maldives</option><option>Paris, France</option></select></label>
+        <label class="block"><span class="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">Travel month</span><select class="w-full rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none"><option>Any time</option><option>November 2026</option><option>December 2026</option><option>January 2027</option><option>Spring 2027</option><option>Summer 2027</option></select></label>
+        <button class="self-end rounded-xl bg-cyan-400 px-5 py-3.5 font-extrabold text-slate-950 transition hover:bg-white" type="submit">Find my trip ↗</button>
+      </form>
+      <p id="searchMessage" class="mt-3 hidden text-center text-sm text-cyan-300"></p>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <div class="mb-10 flex flex-wrap items-end justify-between gap-5">
+        <div><p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-cyan-300">Pick your next story</p><h2 class="text-4xl font-black sm:text-5xl">Popular destinations</h2></div>
+        <p class="max-w-md text-slate-400">From weekend city breaks to tropical escapes — the world is closer than you think.</p>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="./italy-port.png" alt="Colorful Italian coastal village">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">EUROPE</span><h3 class="mt-3 text-3xl font-extrabold">Italy</h3><p class="mt-1 text-slate-200">Art, food & coastal dreams</p><a href="https://www.italia.it/en"><p class="mt-4 text-sm font-bold text-cyan-300">Explore Italy ↗</p></a></div>
+        </article>
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="./istanbul.png" alt="Istanbul mosque and city">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">CULTURE</span><h3 class="mt-3 text-3xl font-extrabold">Istanbul</h3><p class="mt-1 text-slate-200">Where two continents meet</p><a href="https://goturkiye.com/"><p class="mt-4 text-sm font-bold text-cyan-300">Explore Türkiye ↗</p></a></div>
+        </article>
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai skyline at sunset">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">LUXURY</span><h3 class="mt-3 text-3xl font-extrabold">Dubai</h3><p class="mt-1 text-slate-200">Skyline, desert & style</p><a href="https://www.dubai.ae/"><p class="mt-4 text-sm font-bold text-cyan-300">Explore Dubai ↗</p></a></div>
+        </article>
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=900&q=85" alt="Tokyo city at night">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">ASIA</span><h3 class="mt-3 text-3xl font-extrabold">Japan</h3><p class="mt-1 text-slate-200">Neon cities & ancient traditions</p><a href="https://www.japan.travel/en/uk/"><p class="mt-4 text-sm font-bold text-cyan-300">Explore Japan ↗</p></a></div>
+        </article>
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85" alt="Tropical island with turquoise water">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">ISLAND ESCAPE</span><h3 class="mt-3 text-3xl font-extrabold">Maldives</h3><p class="mt-1 text-slate-200">Blue water, white sand, pure calm</p><p class="mt-4 text-sm font-bold text-cyan-300">Explore Maldives ↗</p></div>
+        </article>
+        <article class="group relative min-h-[370px] overflow-hidden rounded-3xl">
+          <img class="absolute h-full w-full object-cover transition duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85" alt="Eiffel Tower in Paris">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent"></div>
+          <div class="absolute bottom-0 p-6"><span class="rounded-full bg-white/15 px-3 py-1 text-xs backdrop-blur">CITY BREAK</span><h3 class="mt-3 text-3xl font-extrabold">Paris</h3><p class="mt-1 text-slate-200">Romance, museums & cafés</p><p class="mt-4 text-sm font-bold text-cyan-300">Explore France ↗</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section id="packages" class="bg-slate-900/70 py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="mb-10"><p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-cyan-300">Travel your way</p><h2 class="text-4xl font-black sm:text-5xl">Trip packages</h2><p class="mt-4 max-w-2xl text-slate-400">Sample prices to help you dream. Final prices depend on dates, availability and your choices.</p></div>
+        <div class="grid gap-5 lg:grid-cols-3">
+          <article class="rounded-3xl border border-white/10 bg-slate-900 p-7">
+            <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Quick escape</p><h3 class="mt-3 text-2xl font-extrabold">Istanbul Weekend</h3><p class="mt-3 text-4xl font-black">$399 <span class="text-sm font-medium text-slate-400">/ person*</span></p><p class="mt-2 text-sm text-slate-400">Example 3 nights</p><div class="my-6 h-px bg-white/10"></div><ul class="space-y-3 text-sm text-slate-200"><li>✓ Return flight allowance</li><li>✓ 3-night hotel stay</li><li>✓ Breakfast</li><li>✓ City guide suggestions</li></ul><a href="#booking" class="mt-7 block rounded-full border border-white/20 py-3 text-center font-bold transition hover:bg-white hover:text-slate-950">Choose package</a>
+          </article>
+          <article class="relative rounded-3xl border border-cyan-300/60 bg-slate-800 p-7 shadow-2xl shadow-cyan-950/30">
+            <span class="absolute right-6 top-6 rounded-full bg-cyan-300 px-3 py-1 text-xs font-black text-slate-950">POPULAR</span><p class="text-sm font-bold uppercase tracking-widest text-cyan-300">City adventure</p><h3 class="mt-3 text-2xl font-extrabold">Rome Discovery</h3><p class="mt-3 text-4xl font-black">$699 <span class="text-sm font-medium text-slate-400">/ person*</span></p><p class="mt-2 text-sm text-slate-400">Example 5 nights</p><div class="my-6 h-px bg-white/10"></div><ul class="space-y-3 text-sm text-slate-200"><li>✓ Return flight allowance</li><li>✓ 5-night hotel stay</li><li>✓ Daily breakfast</li><li>✓ Suggested sightseeing route</li></ul><a href="#booking" class="mt-7 block rounded-full bg-cyan-400 py-3 text-center font-bold text-slate-950 transition hover:bg-white">Choose package ↗</a>
+          </article>
+          <article class="rounded-3xl border border-white/10 bg-slate-900 p-7">
+            <p class="text-sm font-bold uppercase tracking-widest text-slate-400">Island reset</p><h3 class="mt-3 text-2xl font-extrabold">Maldives Escape</h3><p class="mt-3 text-4xl font-black">$1,199 <span class="text-sm font-medium text-slate-400">/ person*</span></p><p class="mt-2 text-sm text-slate-400">Example 5 nights</p><div class="my-6 h-px bg-white/10"></div><ul class="space-y-3 text-sm text-slate-200"><li>✓ Flight budget allowance</li><li>✓ 5-night island hotel</li><li>✓ Breakfast included</li><li>✓ Transfer planning</li></ul><a href="#booking" class="mt-7 block rounded-full border border-white/20 py-3 text-center font-bold transition hover:bg-white hover:text-slate-950">Choose package</a>
+          </article>
+        </div>
+        <p class="mt-5 text-xs leading-6 text-slate-500">*Illustrative website demo prices only — not live offers or confirmed bookings. Check actual flight, hotel, visa and insurance costs before paying.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT / WHY US -->
+    <section id="about" class="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:items-center lg:px-10">
+      <div>
+        <p class="mb-3 text-sm font-bold uppercase tracking-[.25em] text-cyan-300">Your world, your way</p>
+        <h2 class="text-4xl font-black leading-tight sm:text-5xl">Not just a ticket.<br><span class="text-cyan-300">A whole experience.</span></h2>
+        <p class="mt-6 max-w-xl leading-8 text-slate-400">TAKEOFF helps travelers start in Tashkent and imagine what comes next. Compare ideas, choose your travel style and build a trip that feels like yours.</p>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div class="rounded-2xl border border-white/10 p-5"><span class="text-2xl">✈</span><h3 class="mt-3 font-bold">Easy planning</h3><p class="mt-2 text-sm leading-6 text-slate-400">Keep your destination, dates and budget in one place.</p></div>
+          <div class="rounded-2xl border border-white/10 p-5"><span class="text-2xl">◎</span><h3 class="mt-3 font-bold">Personal trips</h3><p class="mt-2 text-sm leading-6 text-slate-400">Build a journey around your interests and travel style.</p></div>
+        </div>
+      </div>
+      <div class="relative">
+        <img class="h-[500px] w-full rounded-3xl object-cover" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=85" alt="Beautiful mountain lake and travel landscape">
+        <div class="absolute -bottom-5 left-5 rounded-2xl border border-white/10 bg-slate-900/95 p-5 shadow-xl sm:left-8"><p class="text-sm text-slate-400">START HERE</p><p class="mt-1 text-xl font-extrabold">Tashkent, Uzbekistan <span class="text-cyan-300">↗</span></p></div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="bg-cyan-300 px-6 py-20 text-slate-950">
+      <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
+        <div><p class="text-sm font-black uppercase tracking-[.25em]">Let's make it happen</p><h2 class="mt-3 text-4xl font-black sm:text-5xl">Where will you go next?</h2><p class="mt-5 max-w-lg leading-7 text-slate-800">Tell us what you have in mind and start building your next adventure from Tashkent.</p></div>
+        <form id="bookingForm" class="rounded-3xl bg-white p-6 shadow-xl sm:p-8">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="text-sm font-bold">Your name<input required id="name" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 font-normal outline-none focus:border-cyan-500" placeholder="Enter your name"></label>
+            <label class="text-sm font-bold">Email address<input required id="email" type="email" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 font-normal outline-none focus:border-cyan-500" placeholder="you@example.com"></label>
+            <label class="text-sm font-bold sm:col-span-2">Where do you want to go?<input required id="tripDestination" class="mt-2 w-full rounded-xl border border-slate-200 px-4 py-3 font-normal outline-none focus:border-cyan-500" placeholder="e.g. Seoul, South Korea"></label>
+            <label class="text-sm font-bold">Travelers<select id="travelers" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-normal outline-none focus:border-cyan-500"><option>1 traveler</option><option>2 travelers</option><option>3 travelers</option><option>4+ travelers</option></select></label>
+            <label class="text-sm font-bold">Budget per person<select id="budget" class="mt-2 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-normal outline-none focus:border-cyan-500"><option>Under $500</option><option>$500–$1,000</option><option>$1,000–$2,000</option><option>$2,000+</option></select></label>
+          </div>
+          <button class="mt-5 w-full rounded-xl bg-slate-950 px-5 py-4 font-extrabold text-white transition hover:bg-slate-800" type="submit">Create my travel request ↗</button>
+          <p id="bookingMessage" class="mt-4 hidden rounded-xl bg-cyan-50 p-4 text-sm leading-6 text-slate-800"></p>
+          <p class="mt-3 text-xs text-slate-500">Demo form only. It shows your request on this page and does not send or book anything.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10 px-6 py-8">
+    <div class="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-400 sm:flex-row sm:items-center">
+      <a href="#" class="text-xl font-black tracking-[.18em] text-white">TAKE<span class="text-cyan-400">OFF</span><span class="text-cyan-400">.</span></a>
+      <p>From Tashkent to the world. ✈</p>
+      <p>© 2026 TAKEOFF Travel · Demo website</p>
+      <p>+998 91 164 33 55</p>
+    </div>
+  </footer>
+
+  <script>
+    const searchForm = document.getElementById('searchForm');
+    const destinationSelect = document.getElementById('destinationSelect');
+    const searchMessage = document.getElementById('searchMessage');
+    searchForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (destinationSelect.value === 'Choose a destination') {
+        searchMessage.textContent = 'Choose a destination first, and we’ll help you explore it.';
+      } else {
+        searchMessage.textContent = 'Great choice! Scroll down to packages or send us a travel request for ' + destinationSelect.value + '.';
+        document.getElementById('tripDestination').value = destinationSelect.value;
+      }
+      searchMessage.classList.remove('hidden');
+    });
+
+    document.getElementById('bookingForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const destination = document.getElementById('tripDestination').value.trim();
+      const travelers = document.getElementById('travelers').value;
+      const budget = document.getElementById('budget').value;
+      const message = document.getElementById('bookingMessage');
+      message.textContent = 'Thanks, ' + name + '! Your demo request is ready: ' + destination + ', ' + travelers + ', budget ' + budget + '. Contact email entered: ' + email + '. This has not been sent to a travel agency.';
+      message.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
